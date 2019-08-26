@@ -42,9 +42,8 @@ fastify.register((plugin, options, next) => {
 
 fastify.post("/addQuote", async (req, res) => {
   const { quote } = req.body;
-  console.log({ quote });
   const { isSucess } = await mysql.insertQuery("quotes", `${quote}`);
-  res.send(isSucess);
+  res.redirect("/");
 });
 
 fastify.get("/quotes", async (req, res) => {
