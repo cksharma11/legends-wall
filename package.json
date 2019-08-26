@@ -1,0 +1,23 @@
+{
+  "name": "the-lagends-wall",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "fastify": "^2.7.1",
+    "fastify-cookie": "^3.1.0",
+    "fastify-formbody": "^3.1.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "mysql": "^2.17.1",
+    "next": "9.0.5",
+    "next-routes": "^1.4.2",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "styled-jsx": "^3.2.1",
+    "util": "^0.12.1"
+  }
+}
