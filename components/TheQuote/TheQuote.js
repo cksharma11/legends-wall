@@ -4,7 +4,7 @@ import LikeBar from "../LikesBar/LikesBar";
 
 const TheQuote = ({ quote, likes }) => {
   return (
-    <div>
+    <div className="quote-line">
       <div>{quote}</div>
       <LikeBar />
       <style jsx>{TheQuoteStyles}</style>

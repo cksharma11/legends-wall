@@ -4,7 +4,7 @@ import LikesBarStyles from "./LikesBar.style";
 const LikeBar = () => {
   return (
     <div>
-      <button>Like-Icon</button>
+      <button className="like-button">Like-Icon</button>
       <style jsx>{LikesBarStyles}</style>
     </div>
   );
