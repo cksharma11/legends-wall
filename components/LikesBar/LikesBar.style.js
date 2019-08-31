@@ -21,6 +21,10 @@ const LikesBarStyles = css`
     position: relative;
     top: -10px;
   }
+
+  .like-logo:hover {
+    cursor: pointer;
+  }
 `;
 
 export default LikesBarStyles;

@@ -16,7 +16,6 @@ const TheQuoteStyles = css`
   }
 
   .quote-line:hover {
-    cursor: pointer;
     transition: transform 0.1s;
     transform: scale(1.05);
     box-shadow: 0px 0px 10px gray;
@@ -31,6 +30,9 @@ const TheQuoteStyles = css`
   }
   .quote {
     padding: 10px;
+  }
+  .quote:hover {
+    cursor: pointer;
   }
 `;
 
