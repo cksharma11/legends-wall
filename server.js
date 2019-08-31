@@ -8,13 +8,6 @@ const mysql = require("./db/dbUtils");
 const PORT = 8080;
 const dev = process.env.NODE_ENV !== "production";
 
-const POST_CALL_CONFIG = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  }
-};
-
 const logger = (req, res, next) => {
   // eslint-disable-next-line no-console
   console.log(req.method, req.url);
@@ -42,12 +35,18 @@ fastify.register((plugin, options, next) => {
 
 fastify.post("/addQuote", async (req, res) => {
   const { quote } = req.body;
-  const { isSucess } = await mysql.insertQuery("quotes", `${quote}`);
+  const { isSucess } = await mysql.insertQuote("quotes", `${quote}`);
   res.redirect("/");
 });
 
 fastify.get("/quotes", async (req, res) => {
   const quotes = await mysql.selectQuery("quotes");
+  res.send(JSON.stringify(quotes));
+});
+
+fastify.post("/like", async (req, res) => {
+  const { id, likes } = req.body;
+  const quotes = await mysql.updateLikes("quotes", id, likes);
   res.send(JSON.stringify(quotes));
 });
 

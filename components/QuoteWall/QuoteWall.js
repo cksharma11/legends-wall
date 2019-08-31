@@ -8,8 +8,8 @@ const QuoteWall = ({ quotes }) => {
       {quotes.map((quote, index) => {
         return (
           <TheQuote
-            quote={quote.quote}
-            likes={0}
+            key={quote.id}
+            quote={quote}
             className={index % 2 === 0 ? "even" : "odd"}
           />
         );

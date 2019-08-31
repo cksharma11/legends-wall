@@ -2,8 +2,8 @@ const { pool } = require("./config");
 
 const DEFAULT_CONDITION = "1=1";
 
-const insertQuery = async (table, data) => {
-  const query = `Insert into ${table} values('${data}')`;
+const insertQuote = async (table, data) => {
+  const query = `Insert into ${table}(quote) values('${data}')`;
   const result = await pool.query(query);
   return result;
 };
@@ -19,4 +19,10 @@ const executeQuery = async query => {
   return result;
 };
 
-module.exports = { insertQuery, selectQuery, executeQuery };
+const updateLikes = async (table, id, likes) => {
+  const query = `update ${table} set likes=${likes + 1} where id=${id}`;
+  const result = await pool.query(query);
+  return result;
+};
+
+module.exports = { insertQuote, selectQuery, executeQuery, updateLikes };
