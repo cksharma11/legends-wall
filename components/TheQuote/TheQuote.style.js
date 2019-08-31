@@ -10,7 +10,6 @@ const TheQuoteStyles = css`
     flex-direction: column;
     font-size: 30px;
     margin: 10px;
-    border: 1px solid gray;
     border-radius: 3px;
     text-align: center;
     transition: transform 0.1s;
