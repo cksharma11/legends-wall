@@ -5,12 +5,11 @@ import httpService from "../httpService/httpService";
 import QuoteWall from "../components/QuoteWall/QuoteWall";
 
 const Home = ({ quotes, subQuotes }) => {
-  console.log({subQuotes})
   return (
     <div>
       <Header />
       <AddQuote />
-      <QuoteWall quotes={quotes} subQuotes={subQuotes}/>
+      <QuoteWall quotes={quotes} subQuotes={subQuotes} />
     </div>
   );
 };
