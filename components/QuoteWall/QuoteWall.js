@@ -2,7 +2,7 @@ import React from "react";
 import TheQuote from "../TheQuote/TheQuote";
 import QuoteWallStyles from "./QuoteWall.styles";
 
-const QuoteWall = ({ quotes }) => {
+const QuoteWall = ({ quotes, subQuotes }) => {
   return (
     <div className="quote-wall">
       {quotes
@@ -11,6 +11,7 @@ const QuoteWall = ({ quotes }) => {
             <TheQuote
               key={quote.id}
               quote={quote}
+              subQuotes={subQuotes}
               className={index % 2 === 0 ? "even" : "odd"}
             />
           );

@@ -39,8 +39,23 @@ fastify.post("/addQuote", async (req, res) => {
   res.redirect("/");
 });
 
+fastify.post("/addSubQuote", async (req, res) => {
+  const { subQuote, quoteId } = req.body;
+  const { isSucess } = await mysql.insertSubQuote(
+    "subQuotes",
+    `${subQuote}`,
+    quoteId
+  );
+  res.redirect("/");
+});
+
 fastify.get("/quotes", async (req, res) => {
   const quotes = await mysql.selectQuery("quotes");
+  res.send(JSON.stringify(quotes));
+});
+
+fastify.get("/subQuotes", async (req, res) => {
+  const quotes = await mysql.selectQuery("subQuotes");
   res.send(JSON.stringify(quotes));
 });
 

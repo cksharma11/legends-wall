@@ -2,7 +2,7 @@ import React from "react";
 import SubQuotesStyles from "./SubQuotes.style";
 import AddSubQuote from "../AddSubQuote/AddSubQuote";
 
-const SubQuotes = ({ quote, background, subQuotes, hideSubQuotes }) => {
+const SubQuotes = ({ quote, background, subQuotes, hideSubQuotes, id }) => {
   return (
     <div className="main-container">
       <div className={`sub-quote odd`}>
@@ -12,10 +12,10 @@ const SubQuotes = ({ quote, background, subQuotes, hideSubQuotes }) => {
           className="close-icon"
           onClick={hideSubQuotes}
         />
-        <AddSubQuote />
+        <AddSubQuote id={id} />
         <div className="sub-quote-container">
           {subQuotes.map(subQuote => {
-            return <div className="sub-quote-line">{subQuote}</div>;
+            return <div className="sub-quote-line">{subQuote.subQuote}</div>;
           })}
         </div>
       </div>

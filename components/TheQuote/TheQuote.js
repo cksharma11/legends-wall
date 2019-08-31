@@ -3,7 +3,10 @@ import TheQuoteStyles from "./TheQuote.style";
 import LikeBar from "../LikesBar/LikesBar";
 import SubQuotes from "../SubQuotes/SubQuotes";
 
-const TheQuote = ({ quote, className }) => {
+const TheQuote = ({ quote, className, subQuotes }) => {
+  const relatedSubQuotes = subQuotes.filter(
+    subQuote => subQuote.quoteId === quote.id
+  );
   const [subQuoteToggle, setSubQuoteToggle] = useState(false);
 
   const showSubQuotes = () => {
@@ -21,12 +24,9 @@ const TheQuote = ({ quote, className }) => {
         <SubQuotes
           quote={quoteText}
           background={className}
-          subQuotes={[
-            'Who is that legend :)',
-            'Fuck the hell of this legend!!',
-            'Ohh God love this quote :: Fuking bullshit'
-          ]}
+          subQuotes={relatedSubQuotes}
           hideSubQuotes={hideSubQuotes}
+          id={id}
         />
       ) : null}
       <div className={`quote-line ${className}`}>
