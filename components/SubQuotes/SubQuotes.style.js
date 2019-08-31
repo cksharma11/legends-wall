@@ -7,18 +7,17 @@ const SubQuotesStyles = css`
     z-index: 1;
     position: absolute;
     top: 0;
-    background: #3b3c3c78;
+    background: #212121eb;
   }
 
   .sub-quote {
-    height: 500px;
-    width: 50%;
+    height: 600px;
+    width: 60%;
     z-index: 2;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px gray;
     position: relative;
     top: 15%;
-    left: 25%;
+    left: 20%;
     background: #007065;
   }
 
