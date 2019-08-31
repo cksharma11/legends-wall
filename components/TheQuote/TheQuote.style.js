@@ -10,15 +10,25 @@ const TheQuoteStyles = css`
     flex-direction: column;
     font-size: 30px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1px solid gray;
+    border-radius: 3px;
+    text-align: center;
+    transition: transform 0.1s;
+  }
+
+  .quote-line:hover {
+    cursor: pointer;
+    transition: transform 0.1s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px gray;
   }
 
   .even {
-    background: white;
+    background: #f5c181;
   }
 
   .odd {
-    background: whitesmoke;
+    background: #00a79d;
   }
   .quote {
     padding: 10px;

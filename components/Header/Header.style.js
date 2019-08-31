@@ -7,7 +7,7 @@ const HeaderStyles = css`
     justify-content: center;
     align-items: center;
     font-size: 35px;
-    border-bottom: 1px solid black;
+    padding: 20px;
   }
 `;
 

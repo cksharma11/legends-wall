@@ -12,11 +12,24 @@ const AddQuoteStyles = css`
     height: 34px;
     width: 100px;
     margin-left: 10px;
+    border-radius: 30px;
+    font-family: fantasy;
+    background: #007065;
+    line-height: 3;
   }
 
   form > input {
-    height: 30px;
+    height: 35px;
     width: 800px;
+    font-size: 15px;
+    text-align: center;
+    font-family: fantasy;
+    border-radius: 40px;
+    border: none;
+  }
+
+  form > input:focus {
+    outline: none;
   }
 `;
 

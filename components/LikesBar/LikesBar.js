@@ -9,10 +9,13 @@ const LikeBar = ({ likes = 0, id }) => {
 
   return (
     <div className="likebar">
-      <button className="likes">{likes}</button>
       <button className="like-button" onClick={likeQuote}>
-        Like
+        <img
+          src="https://img.icons8.com/carbon-copy/100/000000/facebook-like.png"
+          className="like-logo"
+        />
       </button>
+      <div className="reactions">{likes}</div>
       <style jsx>{LikesBarStyles}</style>
     </div>
   );
