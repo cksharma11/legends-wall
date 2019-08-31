@@ -1,10 +1,11 @@
 import React from "react";
 import LikesBarStyles from "./LikesBar.style";
 
-const LikeBar = () => {
+const LikeBar = ({ likes = 0 }) => {
   return (
-    <div>
-      <button className="like-button">Like-Icon</button>
+    <div className='likebar'>
+      <button className="likes">{likes}</button>
+      <button className="like-button">Like</button>
       <style jsx>{LikesBarStyles}</style>
     </div>
   );

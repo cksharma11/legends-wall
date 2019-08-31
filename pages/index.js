@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import AddQuote from "../components/AddQuote/AddQuote";
-import TheQuote from "../components/TheQuote/TheQuote";
 import httpService from "../httpService/httpService";
 import QuoteWall from "../components/QuoteWall/QuoteWall";
 

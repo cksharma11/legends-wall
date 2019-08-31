@@ -4,9 +4,15 @@ import QuoteWallStyles from "./QuoteWall.styles";
 
 const QuoteWall = ({ quotes }) => {
   return (
-    <div>
-      {quotes.map(quote => {
-        return <TheQuote quote={quote.quote} likes={0} />;
+    <div className="quote-wall">
+      {quotes.map((quote, index) => {
+        return (
+          <TheQuote
+            quote={quote.quote}
+            likes={0}
+            className={index % 2 === 0 ? "even" : "odd"}
+          />
+        );
       })}
       <style jsx>{QuoteWallStyles}</style>
     </div>
