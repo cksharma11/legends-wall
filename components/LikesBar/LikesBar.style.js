@@ -19,7 +19,7 @@ const LikesBarStyles = css`
   .like-logo {
     width: 50px;
     position: relative;
-    top: -10px;
+    top: -5px;
   }
 
   .like-logo:hover {

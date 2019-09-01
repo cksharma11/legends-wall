@@ -20,8 +20,10 @@ const QuoteWall = ({ quotes, subQuotes }) => {
       <style jsx>{QuoteWallStyles}</style>
       <style jsx global>{`
         html body {
+          @import url("https://fonts.googleapis.com/css?family=Open+Sans:300i&display=swap");
           background: #007065;
-          font-family: fantasy;
+          font-family: "Open Sans", sans-serif;
+          color: white;
         }
       `}</style>
     </div>

@@ -13,7 +13,8 @@ const AddQuoteStyles = css`
     width: 100px;
     margin-left: 10px;
     border-radius: 30px;
-    font-family: fantasy;
+    font-family: "Open Sans", sans-serif;
+    color: white;
     background: #007065;
     line-height: 3;
   }
@@ -23,7 +24,7 @@ const AddQuoteStyles = css`
     width: 800px;
     font-size: 15px;
     text-align: center;
-    font-family: fantasy;
+    font-family: "Open Sans", sans-serif;
     border-radius: 40px;
     border: none;
   }

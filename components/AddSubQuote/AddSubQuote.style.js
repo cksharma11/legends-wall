@@ -13,7 +13,8 @@ const AddSubQuoteStyles = css`
     width: 150px;
     margin-left: 10px;
     border-radius: 30px;
-    font-family: fantasy;
+    font-family: "Open Sans", sans-serif;
+    color: white;
     background: #007065;
     line-height: 3;
     border: none;
@@ -24,7 +25,7 @@ const AddSubQuoteStyles = css`
     width: 325px;
     font-size: 15px;
     text-align: center;
-    font-family: fantasy;
+    font-family: "Open Sans", sans-serif;
     border-radius: 40px;
     border: none;
   }
