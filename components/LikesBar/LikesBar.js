@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import LikesBarStyles from "./LikesBar.style";
 import httpService from "../../httpService/httpService";
 
 const LikeBar = ({ likes = 0, id }) => {
   const likeQuote = async () => {
     window.location.reload();
-    const r = await httpService.post("http://localhost:8080/like", {
+    await httpService.post(`/like`, {
       body: JSON.stringify({
         id: id,
         likes: likes

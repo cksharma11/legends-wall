@@ -4,6 +4,8 @@ import LikeBar from "../LikesBar/LikesBar";
 import SubQuotes from "../SubQuotes/SubQuotes";
 
 const TheQuote = ({ quote, className, subQuotes }) => {
+  const { quote: quoteText, likes, id } = quote;
+
   const relatedSubQuotes = subQuotes.filter(
     subQuote => subQuote.quoteId === quote.id
   );
@@ -17,13 +19,11 @@ const TheQuote = ({ quote, className, subQuotes }) => {
     setSubQuoteToggle(false);
   };
 
-  const { quote: quoteText, likes, id } = quote;
   return (
     <Fragment>
       {subQuoteToggle ? (
         <SubQuotes
           quote={quoteText}
-          background={className}
           subQuotes={relatedSubQuotes}
           hideSubQuotes={hideSubQuotes}
           id={id}
