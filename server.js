@@ -4,7 +4,7 @@ const bodyParser = require("fastify-formbody");
 const routes = require("./routes/routes");
 const mysql = require("./db/dbUtils");
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const dev = process.env.NODE_ENV !== "production";
 
 const logger = (req, res, next) => {
