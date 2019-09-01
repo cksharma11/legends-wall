@@ -1,6 +1,5 @@
 const Next = require("next");
 const fastify = require("fastify")();
-const fetch = require("isomorphic-unfetch");
 const bodyParser = require("fastify-formbody");
 const routes = require("./routes/routes");
 const mysql = require("./db/dbUtils");
@@ -62,7 +61,7 @@ fastify.get("/subQuotes", async (req, res) => {
 fastify.post("/like", async (req, res) => {
   const { id, likes } = req.body;
   const quotes = await mysql.updateLikes("quotes", id, likes);
-  res.send(JSON.stringify(quotes));
+  res.redirect("/");
 });
 
 const start = () => {
