@@ -5,6 +5,7 @@ const AddSubQuote = ({ id }) => {
   return (
     <form method="POST" action="/addSubQuote" className="add-quote-form">
       <input
+        autocomplete="off"
         type="text"
         name="subQuote"
         placeholder="Remember you are writing on legends wall"

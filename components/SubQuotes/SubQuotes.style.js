@@ -37,7 +37,7 @@ const SubQuotesStyles = css`
 
   .sub-quote-line {
     font-size: 20px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #007065;
     padding: 5px;
     margin: 5px;
   }
