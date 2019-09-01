@@ -4,7 +4,7 @@ import HeaderStyles from "./Header.style";
 const Header = () => {
   return (
     <div className="header">
-      Wall of Lagends
+      Wall of Legends
       <style jsx>{HeaderStyles}</style>
     </div>
   );
