@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import TheQuoteStyles from "./TheQuote.style";
 import LikeBar from "../LikesBar/LikesBar";
 import SubQuotes from "../SubQuotes/SubQuotes";
+import CommentCount from "../CommentCount/CommentCount";
 
 const TheQuote = ({ quote, className, subQuotes }) => {
   const { quote: quoteText, likes, id } = quote;
@@ -33,7 +34,13 @@ const TheQuote = ({ quote, className, subQuotes }) => {
         <div className="quote" onClick={showSubQuotes}>
           {quoteText}
         </div>
-        <LikeBar likes={likes} id={id} />
+        <div className="additional-options">
+          <LikeBar likes={likes} id={id} />
+          <CommentCount
+            count={relatedSubQuotes.length}
+            onClick={showSubQuotes}
+          />
+        </div>
         <style jsx>{TheQuoteStyles}</style>
       </div>
     </Fragment>

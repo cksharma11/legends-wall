@@ -34,6 +34,9 @@ const TheQuoteStyles = css`
   .quote:hover {
     cursor: pointer;
   }
+  .additional-options {
+    display: flex;
+  }
 `;
 
 export default TheQuoteStyles;
